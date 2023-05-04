@@ -1,0 +1,32 @@
+{
+    "CallerReference": "cloudfront-cli-distribution",
+    "Comment": "Cloudfront Distribution Create using CLI",
+    "DefaultRootObject": "check.html",
+    "Origins": {
+        "Quantity": 1,
+        "Items": [{
+            "Id": "cloudfrontclicheck",
+            "DomainName": "cloudfrontclicheck.s3.amazonaws.com",
+            "S3OriginConfig": {
+                "OriginAccessIdentity": ""
+            }
+        }]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "cloudfrontclicheck",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "TrustedSigners": {
+            "Quantity": 0,
+            "Enabled": false
+        },
+        "ForwardedValues": {
+            "Cookies": {"Forward": "all"},
+            "Headers": {"Quantity": 0},
+            "QueryString": false,
+            "QueryStringCacheKeys": {"Quantity": 0}
+        },
+        "DefaultTTL": 86400,
+        "MinTTL": 3600
+    },
+    "Enabled": true
+}
