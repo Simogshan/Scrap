@@ -1,0 +1,7 @@
+import csv
+
+LOAD DATA INFILE 'person.csv'
+INTO TABLE person1
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
